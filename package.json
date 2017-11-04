@@ -1,0 +1,30 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "I am constructing a LIRI node app to be processed using node!",
+  "main": "keys.js",
+  "scripts": {
+    "start": "node liri.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yealemiyelij/liri-node-app.git"
+  },
+  "keywords": [
+    "yealemiyelij",
+    "liri-node-app"
+  ],
+  "author": "Wondu Yimer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yealemiyelij/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/yealemiyelij/liri-node-app#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.83.0",
+    "twitter": "^1.7.1"
+  }
+}
