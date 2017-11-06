@@ -44,13 +44,13 @@ function movieThis() {
 
     params = movie
     request("http://www.omdbapi.com/?apikey=" + api_key + "&t=" + params + "&y=&plot=short&r=json&tomatoes=true", function (error, response, body) {
-        console.log(body);
+        //console.log(body);
         if (!error && response.statusCode == 200) {
             var movieObject = JSON.parse(body);
             //console.log(movieObject); 
             var movieResults =
-                // "------------------------------ begin ------------------------------" + "\r\n"
-                "Title: " + movieObject.Title + "\r\n" +
+                "------------------------------ begin ------------------------------" + "\r\n"
+            "Title: " + movieObject.Title + "\r\n" +
                 "Year: " + movieObject.Year + "\r\n" +
                 "Imdb Rating: " + movieObject.imdbRating + "\r\n" +
                 "Country: " + movieObject.Country + "\r\n" +
@@ -72,12 +72,8 @@ function movieThis() {
 // tweet function using asynchronous client library linked to https://www.npmjs.com/package/twitter
 function myTweets() {
     var client = new Twitter(keys.twitterKeys);
-    console.log(client);
+    // console.log(client);
 
-    // var twitterUsername = process.argv[3];
-    // if (!twitterUsername) {
-    //     twitterUsername = "MesfinGaddesa";
-    // }
     params = {
         screen_name: "MesfinGaddesa"
     };
