@@ -39,7 +39,7 @@ switch (liriArgument) {
 function movieThis() {
     var movie = process.argv[3];
     if (!movie) {
-        movie = "mr nobody";
+        movie = "titanic";
     }
 
     params = movie
@@ -49,8 +49,8 @@ function movieThis() {
             var movieObject = JSON.parse(body);
             //console.log(movieObject); 
             var movieResults =
-                "------------------------------ begin ------------------------------" + "\r\n"
-            "Title: " + movieObject.Title + "\r\n" +
+
+                "Title: " + movieObject.Title + "\r\n" +
                 "Year: " + movieObject.Year + "\r\n" +
                 "Imdb Rating: " + movieObject.imdbRating + "\r\n" +
                 "Country: " + movieObject.Country + "\r\n" +
@@ -58,8 +58,8 @@ function movieThis() {
                 "Plot: " + movieObject.Plot + "\r\n" +
                 "Actors: " + movieObject.Actors + "\r\n" +
                 "Rotten Tomatoes Rating: " + movieObject.tomatoRating + "\r\n" +
-                "Rotten Tomatoes URL: " + movieObject.tomatoURL + "\r\n" +
-                "------------------------------ fin ------------------------------" + "\r\n";
+                "Rotten Tomatoes URL: " + movieObject.tomatoURL + "\r\n";
+
             console.log(movieResults);
             log(movieResults);
         } else {
@@ -100,7 +100,7 @@ function myTweets() {
 function spotifyThisSong(songName) {
     var songName = process.argv[3];
     if (!songName) {
-        songName = "What's my age again";
+        songName = "rolling in the deep";
     }
     params = songName;
     spotify.search({
